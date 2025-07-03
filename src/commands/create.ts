@@ -200,7 +200,7 @@ export async function createCommand(name: string, options: CreateOptions) {
 
   } catch (error) {
     spinner.fail('Failed to create element');
-    logger.error(error.message);
+    logger.error(error instanceof Error ? error.message : 'Unknown error');
     process.exit(1);
   }
 }

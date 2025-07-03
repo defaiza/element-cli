@@ -9,7 +9,7 @@
 const semver = require('semver');
 const { engines } = require('../package.json');
 
-if (!semver.satisfiesRange(process.version, engines.node)) {
+if (!semver.satisfies(process.version, engines.node)) {
   console.error(
     `Required Node.js version ${engines.node} not satisfied with current version ${process.version}.`
   );
@@ -25,4 +25,10 @@ updateNotifier({ pkg }).notify();
 require('dotenv').config();
 
 // Run the CLI
-require('../lib/cli');
+try {
+  require('../lib/cli');
+} catch (error) {
+  console.error('Failed to load CLI:', error.message);
+  console.error('Make sure to run "npm run build" first');
+  process.exit(1);
+}

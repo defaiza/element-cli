@@ -1,0 +1,34 @@
+{
+  "id": "element-id",
+  "name": "Element Name",
+  "version": "1.0.0",
+  "description": "Element description",
+  "author": "Your Name",
+  "category": "Utilities",
+  "tierRequired": "free",
+  "price": 0,
+  "defaultSize": {
+    "width": 400,
+    "height": 300
+  },
+  "minSize": {
+    "width": 200,
+    "height": 150
+  },
+  "maxSize": {
+    "width": 800,
+    "height": 600
+  },
+  "permissions": {
+    "wallet": false,
+    "network": false,
+    "storage": false,
+    "notifications": false,
+    "camera": false,
+    "microphone": false,
+    "location": false,
+    "clipboard": false
+  },
+  "entryPoint": "src/index.js",
+  "buildOutput": "dist"
+} 
