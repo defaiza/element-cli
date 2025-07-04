@@ -1,0 +1,51 @@
+.price-ticker {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ticker-row {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.ticker-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.ticker-item .label {
+  font-size: 0.75rem;
+  color: #7d8590;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ticker-item .value {
+  font-size: 1rem;
+  color: #e6edf3;
+  font-weight: 500;
+}
+
+.ticker-item .value.large {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.ticker-item .value.positive {
+  color: #26a641;
+}
+
+.ticker-item .value.negative {
+  color: #f85149;
+}
+
+.trading-app.light .ticker-item .label {
+  color: #57606a;
+}
+
+.trading-app.light .ticker-item .value {
+  color: #24292e;
+}

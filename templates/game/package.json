@@ -1,0 +1,21 @@
+{
+  "name": "defai-element-game",
+  "version": "1.0.0",
+  "description": "Canvas-based game DEFAI Element",
+  "private": true,
+  "main": "dist/main.js",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "html-webpack-plugin": "^5.5.3",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}

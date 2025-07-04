@@ -13,6 +13,8 @@ export interface CliConfig {
   defaultTemplate?: string;
   analytics?: boolean;
   telemetry?: boolean;
+  userEmail?: string;
+  userId?: string;
 }
 
 const defaultConfig: CliConfig = {

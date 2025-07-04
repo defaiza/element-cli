@@ -1,0 +1,181 @@
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.order-type-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.5rem;
+  background-color: transparent;
+  color: #7d8590;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.tab:hover {
+  background-color: #21262d;
+  color: #e6edf3;
+}
+
+.tab.active {
+  background-color: #238636;
+  color: #ffffff;
+  border-color: #238636;
+}
+
+.side-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.side-btn {
+  padding: 0.75rem;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  background-color: transparent;
+}
+
+.side-btn.buy {
+  color: #26a641;
+  border-color: #26a641;
+}
+
+.side-btn.buy.active {
+  background-color: #26a641;
+  color: #ffffff;
+}
+
+.side-btn.sell {
+  color: #f85149;
+  border-color: #f85149;
+}
+
+.side-btn.sell.active {
+  background-color: #f85149;
+  color: #ffffff;
+}
+
+.form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  color: #7d8590;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  padding-right: 3rem;
+  background-color: #0d1117;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #58a6ff;
+}
+
+.form-group input:disabled {
+  background-color: #21262d;
+  color: #7d8590;
+}
+
+.suffix {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.5rem;
+  color: #7d8590;
+  font-size: 0.875rem;
+}
+
+.submit-btn {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 0.5rem;
+}
+
+.submit-btn.buy {
+  background-color: #26a641;
+  color: #ffffff;
+}
+
+.submit-btn.buy:hover {
+  background-color: #2ea043;
+}
+
+.submit-btn.sell {
+  background-color: #f85149;
+  color: #ffffff;
+}
+
+.submit-btn.sell:hover {
+  background-color: #fa5551;
+}
+
+.trading-app.light .tab {
+  border-color: #d0d7de;
+  color: #57606a;
+}
+
+.trading-app.light .tab:hover {
+  background-color: #f6f8fa;
+  color: #24292e;
+}
+
+.trading-app.light .tab.active {
+  background-color: #2ea043;
+  border-color: #2ea043;
+}
+
+.trading-app.light .side-btn {
+  border-color: #d0d7de;
+}
+
+.trading-app.light .form-group label {
+  color: #57606a;
+}
+
+.trading-app.light .form-group input {
+  background-color: #ffffff;
+  color: #24292e;
+  border-color: #d0d7de;
+}
+
+.trading-app.light .form-group input:focus {
+  border-color: #0969da;
+}
+
+.trading-app.light .form-group input:disabled {
+  background-color: #f6f8fa;
+  color: #57606a;
+}
+
+.trading-app.light .suffix {
+  color: #57606a;
+}

@@ -1,0 +1,85 @@
+.technical-indicators {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.indicators-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.indicator {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem;
+  background-color: #21262d;
+  border-radius: 4px;
+  border: 1px solid #30363d;
+}
+
+.indicator-name {
+  font-size: 0.75rem;
+  color: #7d8590;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.indicator-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #e6edf3;
+}
+
+.indicator-value.overbought {
+  color: #f85149;
+}
+
+.indicator-value.oversold {
+  color: #26a641;
+}
+
+.indicator-value.neutral {
+  color: #e6edf3;
+}
+
+.indicator-value.bullish {
+  color: #26a641;
+}
+
+.indicator-value.bearish {
+  color: #f85149;
+}
+
+.indicator-value.increasing {
+  color: #26a641;
+}
+
+.indicator-value.decreasing {
+  color: #f85149;
+}
+
+.trading-app.light .indicator {
+  background-color: #f6f8fa;
+  border-color: #d0d7de;
+}
+
+.trading-app.light .indicator-name {
+  color: #57606a;
+}
+
+.trading-app.light .indicator-value {
+  color: #24292e;
+}
+
+.trading-app.light .indicator-value.neutral {
+  color: #24292e;
+}
+
+@media (max-width: 1400px) {
+  .indicators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

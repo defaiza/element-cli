@@ -6,7 +6,7 @@ import { devCommand } from './commands/dev';
 import { buildCommand } from './commands/build';
 import { validateCommand } from './commands/validate';
 import { publishCommand } from './commands/publish';
-import { loginCommand } from './commands/login';
+import { loginCommand, logoutCommand } from './commands/login';
 import { statsCommand } from './commands/stats';
 import { listCommand } from './commands/list';
 import { configCommand } from './commands/config';
@@ -94,10 +94,7 @@ program
 program
   .command('logout')
   .description('Logout from your DEFAI developer account')
-  .action(() => {
-    logger.info('Logging out...');
-    // Implementation
-  });
+  .action(logoutCommand);
 
 // View element statistics
 program
@@ -150,11 +147,20 @@ program
   .action(() => {
     logger.info('Available templates:');
     logger.info('  • react - React-based element (default)');
+    logger.info('  • nextjs - Next.js element with App Router');
     logger.info('  • vue - Vue.js element');
+    logger.info('  • svelte - Svelte element');
+    logger.info('  • solid - SolidJS element');
     logger.info('  • vanilla - Vanilla JavaScript element');
     logger.info('  • game - Game element with canvas');
     logger.info('  • chart - Data visualization element');
     logger.info('  • trading - Trading tools element');
+    logger.info('  • ai-ml - AI/ML element with TensorFlow.js');
+    logger.info('  • dashboard - Admin dashboard element');
+    logger.info('  • ecommerce - E-commerce element');
+    logger.info('  • social - Social media element');
+    logger.info('  • productivity - Productivity element');
+    logger.info('  • entertainment - Entertainment element');
   });
 
 // Info command

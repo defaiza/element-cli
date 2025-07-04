@@ -1,0 +1,63 @@
+.trade-history {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.trades-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.5rem 0;
+  font-size: 0.75rem;
+  color: #7d8590;
+  font-weight: 600;
+  border-bottom: 1px solid #30363d;
+}
+
+.trades-list {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.trade-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.trade-row:hover {
+  background-color: #21262d33;
+}
+
+.trade-row.buy .price {
+  color: #26a641;
+}
+
+.trade-row.sell .price {
+  color: #f85149;
+}
+
+.trade-row .time {
+  color: #7d8590;
+  font-size: 0.75rem;
+}
+
+.trade-row .amount {
+  text-align: right;
+}
+
+.trading-app.light .trades-header {
+  color: #57606a;
+  border-bottom-color: #d0d7de;
+}
+
+.trading-app.light .trade-row:hover {
+  background-color: #f6f8fa;
+}
+
+.trading-app.light .trade-row .time {
+  color: #57606a;
+}

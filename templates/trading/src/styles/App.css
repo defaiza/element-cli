@@ -1,0 +1,169 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.trading-app {
+  min-height: 100vh;
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+.trading-app.light {
+  background-color: #ffffff;
+  color: #24292e;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #161b22;
+  border-bottom: 1px solid #30363d;
+}
+
+.trading-app.light .header {
+  background-color: #f6f8fa;
+  border-bottom-color: #d0d7de;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #58a6ff;
+}
+
+.trading-app.light .header h1 {
+  color: #0969da;
+}
+
+.symbol-dropdown {
+  padding: 0.5rem 1rem;
+  background-color: #21262d;
+  color: #e6edf3;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.trading-app.light .symbol-dropdown {
+  background-color: #ffffff;
+  color: #24292e;
+  border-color: #d0d7de;
+}
+
+.trading-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  height: calc(100vh - 73px);
+}
+
+.left-panel,
+.middle-panel,
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.price-ticker-section {
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+
+.chart-section {
+  flex: 1;
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  min-height: 400px;
+}
+
+.indicators-section {
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  height: 150px;
+}
+
+.orderbook-section {
+  flex: 1;
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  overflow: hidden;
+}
+
+.trades-section {
+  flex: 1;
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  overflow: hidden;
+}
+
+.order-form-section {
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+
+.positions-section {
+  flex: 1;
+  background-color: #161b22;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  overflow: auto;
+}
+
+.trading-app.light .price-ticker-section,
+.trading-app.light .chart-section,
+.trading-app.light .indicators-section,
+.trading-app.light .orderbook-section,
+.trading-app.light .trades-section,
+.trading-app.light .order-form-section,
+.trading-app.light .positions-section {
+  background-color: #ffffff;
+  border-color: #d0d7de;
+}
+
+.section-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  color: #7d8590;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trading-app.light .section-title {
+  color: #57606a;
+}
+
+@media (max-width: 1200px) {
+  .trading-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .left-panel,
+  .middle-panel,
+  .right-panel {
+    grid-column: 1;
+  }
+}

@@ -1,0 +1,85 @@
+.order-book {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.order-book-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.5rem 0;
+  font-size: 0.75rem;
+  color: #7d8590;
+  font-weight: 600;
+  border-bottom: 1px solid #30363d;
+}
+
+.asks,
+.bids {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.order-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0.25rem 0;
+  font-size: 0.875rem;
+  position: relative;
+  cursor: pointer;
+}
+
+.order-row:hover {
+  background-color: #21262d33;
+}
+
+.order-bg {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.ask .order-bg {
+  background-color: #f85149;
+}
+
+.bid .order-bg {
+  background-color: #26a641;
+}
+
+.ask .price {
+  color: #f85149;
+}
+
+.bid .price {
+  color: #26a641;
+}
+
+.spread {
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #e6edf3;
+  background-color: #21262d;
+  border-top: 1px solid #30363d;
+  border-bottom: 1px solid #30363d;
+}
+
+.trading-app.light .order-book-header {
+  color: #57606a;
+  border-bottom-color: #d0d7de;
+}
+
+.trading-app.light .order-row:hover {
+  background-color: #f6f8fa;
+}
+
+.trading-app.light .spread {
+  background-color: #f6f8fa;
+  color: #24292e;
+  border-color: #d0d7de;
+}

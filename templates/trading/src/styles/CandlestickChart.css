@@ -1,0 +1,63 @@
+.candlestick-chart {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-container {
+  flex: 1;
+  position: relative;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #7d8590;
+}
+
+.chart-controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.timeframe-btn {
+  padding: 0.25rem 0.75rem;
+  background-color: transparent;
+  color: #7d8590;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.timeframe-btn:hover {
+  background-color: #21262d;
+  color: #e6edf3;
+}
+
+.timeframe-btn.active {
+  background-color: #238636;
+  color: #ffffff;
+  border-color: #238636;
+}
+
+.trading-app.light .timeframe-btn {
+  border-color: #d0d7de;
+  color: #57606a;
+}
+
+.trading-app.light .timeframe-btn:hover {
+  background-color: #f6f8fa;
+  color: #24292e;
+}
+
+.trading-app.light .timeframe-btn.active {
+  background-color: #2ea043;
+  border-color: #2ea043;
+  color: #ffffff;
+}

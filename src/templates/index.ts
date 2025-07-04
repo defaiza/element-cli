@@ -43,6 +43,97 @@ const templates: Record<string, Template> = {
       '.gitignore'
     ]
   },
+  nextjs: {
+    id: 'nextjs',
+    name: 'Next.js Element',
+    description: 'A Next.js-based element with App Router and SSR support',
+    category: 'UI',
+    dependencies: [
+      'next',
+      'react',
+      'react-dom',
+      '@types/react',
+      '@types/react-dom',
+      '@types/node'
+    ],
+    devDependencies: [
+      'typescript',
+      'eslint',
+      'eslint-config-next'
+    ],
+    files: [
+      'package.json',
+      'tsconfig.json',
+      'next.config.js',
+      'manifest.json',
+      'src/app/page.tsx',
+      'src/app/layout.tsx',
+      'src/components/Element.tsx',
+      'src/styles/globals.css',
+      'public/index.html',
+      'README.md',
+      '.gitignore'
+    ]
+  },
+  svelte: {
+    id: 'svelte',
+    name: 'Svelte Element',
+    description: 'A Svelte-based element with TypeScript support',
+    category: 'UI',
+    dependencies: [
+      'svelte',
+      '@sveltejs/kit'
+    ],
+    devDependencies: [
+      '@types/node',
+      'typescript',
+      'svelte-check',
+      'vite',
+      '@sveltejs/vite-plugin-svelte'
+    ],
+    files: [
+      'package.json',
+      'tsconfig.json',
+      'vite.config.ts',
+      'svelte.config.js',
+      'manifest.json',
+      'src/routes/+page.svelte',
+      'src/lib/Element.svelte',
+      'src/app.html',
+      'src/app.css',
+      'README.md',
+      '.gitignore'
+    ]
+  },
+  solid: {
+    id: 'solid',
+    name: 'SolidJS Element',
+    description: 'A SolidJS-based element with fine-grained reactivity',
+    category: 'UI',
+    dependencies: [
+      'solid-js',
+      'solid-router'
+    ],
+    devDependencies: [
+      '@types/node',
+      'typescript',
+      'vite',
+      'vite-plugin-solid'
+    ],
+    files: [
+      'package.json',
+      'tsconfig.json',
+      'vite.config.ts',
+      'manifest.json',
+      'src/index.tsx',
+      'src/App.tsx',
+      'src/components/Element.tsx',
+      'src/styles.css',
+      'index.html',
+      'README.md',
+      '.gitignore'
+    ]
+  },
   vue: {
     id: 'vue',
     name: 'Vue.js Element',
@@ -202,7 +293,232 @@ const templates: Record<string, Template> = {
       'src/api.ts',
       'src/styles.css',
       'public/index.html',
-      'README.md'
+      'README.md',
+      '.gitignore'
+    ]
+  },
+  'ai-ml': {
+    id: 'ai-ml',
+    name: 'AI/ML Element',
+    description: 'An AI-powered element with TensorFlow.js integration',
+    category: 'AI Tools',
+    dependencies: [
+      '@tensorflow/tfjs',
+      'react',
+      'react-dom'
+    ],
+    devDependencies: [
+      '@types/node',
+      'typescript',
+      'webpack',
+      'webpack-cli',
+      'webpack-dev-server',
+      'html-webpack-plugin',
+      'ts-loader',
+      'css-loader',
+      'style-loader',
+      '@types/react',
+      '@types/react-dom'
+    ],
+    files: [
+      'package.json',
+      'tsconfig.json',
+      'webpack.config.js',
+      'manifest.json',
+      'src/index.tsx',
+      'src/AIModel.tsx',
+      'src/utils/tensorflow.ts',
+      'src/styles.css',
+      'public/index.html',
+      'README.md',
+      '.gitignore'
+    ]
+  },
+  dashboard: {
+    id: 'dashboard',
+    name: 'Dashboard Element',
+    description: 'An admin dashboard element with data visualization',
+    category: 'Analytics',
+    dependencies: [
+      'react',
+      'react-dom',
+      'recharts',
+      'axios'
+    ],
+    devDependencies: [
+      '@types/node',
+      'typescript',
+      'webpack',
+      'webpack-cli',
+      'webpack-dev-server',
+      'html-webpack-plugin',
+      'ts-loader',
+      'css-loader',
+      'style-loader',
+      '@types/react',
+      '@types/react-dom'
+    ],
+    files: [
+      'package.json',
+      'tsconfig.json',
+      'webpack.config.js',
+      'manifest.json',
+      'src/index.tsx',
+      'src/components/Dashboard.tsx',
+      'src/components/Widgets.tsx',
+      'src/styles.css',
+      'public/index.html',
+      'README.md',
+      '.gitignore'
+    ]
+  },
+  ecommerce: {
+    id: 'ecommerce',
+    name: 'E-commerce Element',
+    description: 'An e-commerce element with shopping cart and payment integration',
+    category: 'Productivity',
+    dependencies: [
+      'react',
+      'react-dom',
+      'axios'
+    ],
+    devDependencies: [
+      '@types/node',
+      'typescript',
+      'webpack',
+      'webpack-cli',
+      'webpack-dev-server',
+      'html-webpack-plugin',
+      'ts-loader',
+      'css-loader',
+      'style-loader',
+      '@types/react',
+      '@types/react-dom'
+    ],
+    files: [
+      'package.json',
+      'tsconfig.json',
+      'webpack.config.js',
+      'manifest.json',
+      'src/index.tsx',
+      'src/components/Shop.tsx',
+      'src/components/Cart.tsx',
+      'src/styles.css',
+      'public/index.html',
+      'README.md',
+      '.gitignore'
+    ]
+  },
+  social: {
+    id: 'social',
+    name: 'Social Media Element',
+    description: 'A social media element with feed and messaging',
+    category: 'Information',
+    dependencies: [
+      'react',
+      'react-dom',
+      'axios',
+      'socket.io-client'
+    ],
+    devDependencies: [
+      '@types/node',
+      'typescript',
+      'webpack',
+      'webpack-cli',
+      'webpack-dev-server',
+      'html-webpack-plugin',
+      'ts-loader',
+      'css-loader',
+      'style-loader',
+      '@types/react',
+      '@types/react-dom'
+    ],
+    files: [
+      'package.json',
+      'tsconfig.json',
+      'webpack.config.js',
+      'manifest.json',
+      'src/index.tsx',
+      'src/components/Feed.tsx',
+      'src/components/Message.tsx',
+      'src/styles.css',
+      'public/index.html',
+      'README.md',
+      '.gitignore'
+    ]
+  },
+  productivity: {
+    id: 'productivity',
+    name: 'Productivity Element',
+    description: 'A productivity element with task management and calendar',
+    category: 'Productivity',
+    dependencies: [
+      'react',
+      'react-dom',
+      'date-fns'
+    ],
+    devDependencies: [
+      '@types/node',
+      'typescript',
+      'webpack',
+      'webpack-cli',
+      'webpack-dev-server',
+      'html-webpack-plugin',
+      'ts-loader',
+      'css-loader',
+      'style-loader',
+      '@types/react',
+      '@types/react-dom'
+    ],
+    files: [
+      'package.json',
+      'tsconfig.json',
+      'webpack.config.js',
+      'manifest.json',
+      'src/index.tsx',
+      'src/components/TaskManager.tsx',
+      'src/components/Calendar.tsx',
+      'src/styles.css',
+      'public/index.html',
+      'README.md',
+      '.gitignore'
+    ]
+  },
+  entertainment: {
+    id: 'entertainment',
+    name: 'Entertainment Element',
+    description: 'An entertainment element with media player and content discovery',
+    category: 'Games',
+    dependencies: [
+      'react',
+      'react-dom',
+      'howler'
+    ],
+    devDependencies: [
+      '@types/node',
+      'typescript',
+      'webpack',
+      'webpack-cli',
+      'webpack-dev-server',
+      'html-webpack-plugin',
+      'ts-loader',
+      'css-loader',
+      'style-loader',
+      '@types/react',
+      '@types/react-dom'
+    ],
+    files: [
+      'package.json',
+      'tsconfig.json',
+      'webpack.config.js',
+      'manifest.json',
+      'src/index.tsx',
+      'src/components/MediaPlayer.tsx',
+      'src/components/Playlist.tsx',
+      'src/styles.css',
+      'public/index.html',
+      'README.md',
+      '.gitignore'
     ]
   }
 };
