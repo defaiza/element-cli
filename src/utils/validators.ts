@@ -50,9 +50,7 @@ export async function validateProject(projectDir: string): Promise<{
     // Check for required files
     const requiredFiles = [
       'package.json',
-      'manifest.json',
-      'src/index.tsx',
-      'src/index.jsx'
+      'manifest.json'
     ];
     
     for (const file of requiredFiles) {
