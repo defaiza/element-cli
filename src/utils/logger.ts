@@ -73,4 +73,12 @@ export class Logger {
     console.log('\n' + chalk.bold.cyan(title));
     console.log(chalk.gray('─'.repeat(title.length)));
   }
+
+    /**
+   * Log a loading message
+   */
+  loading(message: string): void {
+    console.log(chalk.yellow('⏳'), message);
+  }
+
 } 
